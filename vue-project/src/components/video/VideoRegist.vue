@@ -32,7 +32,7 @@
                 </select>
             </div>
             <div>
-                <button @click="createVideo">등록</button>
+                <button @click="registVideo">등록</button>
                 <button @click="reset">초기화</button>
             </div>
         </fieldset>
@@ -52,8 +52,8 @@
         partCode: 400
     });
 
-    const createVideo = function() {
-        store.createVideo(video.value);
+    const registVideo = function() {
+        store.registVideo(video.value);
     };
 
     const reset = function() { // 초기화

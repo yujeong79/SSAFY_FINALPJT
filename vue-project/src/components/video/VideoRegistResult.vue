@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>디테일</h2>
+        <h2>비디오 등록 완료</h2>
         <table>
             <thead>
                 <tr>
@@ -21,35 +21,12 @@
                 </tr>
             </tbody>
         </table>
-
-        <router-link :to="{name: 'videoUpdate'}">수정</router-link>
-        <button @click="deleteVideo">삭제</button>
-        
-        <hr>
-        
-        <ReviewView/>
     </div>
 </template>
 
 <script setup>
-    import ReviewView from '@/views/ReviewView.vue';
-    import { ref, onMounted } from 'vue';
     import { useVideoStore } from '@/stores/video';
-    import { useRoute } from 'vue-router';
-
     const store = useVideoStore();
-    const route = useRoute();
-
-    const videoId = ref(route.params.videoId);
-
-    onMounted(()=>{
-        store.getVideoByVideoId(videoId.value);
-    })
-
-    const deleteVideo = function() {
-        store.deleteVideo(videoId.value);
-    };
-
 </script>
 
 <style scoped>

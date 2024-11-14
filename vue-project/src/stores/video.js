@@ -40,15 +40,15 @@ export const useVideoStore = defineStore('video', () => {
   }
 
   // 서버에 비디오 등록
-  const registVideo = function() {
+  const registVideo = function(video) {
     axios({
       url: REST_API_URL,
       method: 'POST',
       data: video
     })
-    .then(()=>{
-      msg.value = '등록'
-      router.push({name: 'videoSuccess'})
+    .then((response)=>{
+      video.value = response.data
+      router.push({name: 'videoDetail', params: {videoId: video.value.videoId}})
     })
     .catch(()=>{
       console.log("비디오 등록 에러 발생")
@@ -63,8 +63,7 @@ export const useVideoStore = defineStore('video', () => {
       data: video.value
     })
     .then(()=>{
-      msg.value = '수정'
-      router.push({name: 'videoSuccess'})
+      router.push({name: 'videoDetail', params: {videoId: video.value.videoId}})
     })
     .catch(()=>{
       console.log("비디오 수정 에러 발생")

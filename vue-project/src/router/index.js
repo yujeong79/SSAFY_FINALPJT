@@ -5,6 +5,7 @@ import VideoList from '@/components/video/VideoList.vue'
 import VideoDetail from '@/components/video/VideoDetail.vue'
 import VideoRegist from '@/components/video/VideoRegist.vue'
 import VideoSuccess from '@/components/video/VideoSuccess.vue'
+import VideoRegistResult from '@/components/video/VideoRegistResult.vue'
 import VideoUpdate from '@/components/video/VideoUpdate.vue'
 
 const router = createRouter({
@@ -24,6 +25,11 @@ const router = createRouter({
           path: "regist",
           name: "videoRegist",
           component: VideoRegist,
+        },
+        {
+          path: "regist-result",
+          name: "videoRegistResult",
+          component: VideoRegistResult,
         },
         {
           path: "success",
