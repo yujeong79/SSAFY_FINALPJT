@@ -23,12 +23,18 @@
                 </tr>
             </tbody>
         </table>
-        <ReviewList :video-id="store.video.videoId"/>
+
+        <router-link :to="{name: 'videoUpdate'}">수정</router-link>
+        <button @click="deleteVideo">삭제</button>
+        
+        <hr>
+        
+        <ReviewView/>
     </div>
 </template>
 
 <script setup>
-    import ReviewList from '@/components/video/ReviewList.vue';
+    import ReviewView from '@/views/ReviewView.vue';
     import { ref, onMounted } from 'vue';
     import { useVideoStore } from '@/stores/video';
     import { useRoute } from 'vue-router';
@@ -41,6 +47,10 @@
     onMounted(()=>{
         store.getVideoByVideoId(videoId.value);
     })
+
+    const deleteVideo = function() {
+        store.deleteVideo(videoId.value);
+    };
 
 </script>
 

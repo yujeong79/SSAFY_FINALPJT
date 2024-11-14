@@ -1,7 +1,8 @@
 <template>
     <div>
        <h2>VideoList</h2>
-        <VideoListItem v-for="video in store.videoList" :key="video.videoId" :video="video"></VideoListItem>
+       <VideoListItem v-for="video in store.videoList" :key="video.videoId" :video="video"></VideoListItem>
+        
     </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
     <div class="video-info">
-        {{ video.videoId }}.
         <router-link :to="`/detail/${video.videoId}`">{{ video.title }}</router-link>
         {{ video.youtubeUrl }}
         {{ video.channelName }}
