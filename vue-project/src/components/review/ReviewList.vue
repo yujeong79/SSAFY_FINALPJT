@@ -14,8 +14,10 @@
                     <td>{{ review.userId }}</td>
                     <td v-if="updateReviewId !== review.reviewId"> 
                         {{ review.content }}
-                        <button @click="updateMode(review.reviewId)">수정</button>
-                        <button @click="removeReview(review.reviewId)">삭제</button>
+                        <button v-if="userStore.loginUser && userStore.loginUser.userId === review.userId"
+                            @click="updateMode(review.reviewId)">수정</button>
+                        <button v-if="userStore.loginUser && userStore.loginUser.userId === review.userId" 
+                            @click="removeReview(review.reviewId)">삭제</button>
                     </td>
                     <td v-if="updateReviewId === review.reviewId">
                         <input type="text" v-model="store.review.content">
@@ -31,7 +33,10 @@
 <script setup>
     import { ref, watch } from 'vue';
     import { useReviewStore } from '@/stores/review';
+    import { useUserStore } from '@/stores/user';
+
     const store = useReviewStore();
+    const userStore = useUserStore();
 
     const props = defineProps({
         videoId: Number,

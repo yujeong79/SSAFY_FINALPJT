@@ -22,8 +22,10 @@
             </tbody>
         </table>
 
-        <router-link :to="{name: 'videoUpdate'}">수정</router-link>
-        <button @click="deleteVideo">삭제</button>
+        <router-link v-if="userStore.loginUser"
+            :to="{name: 'videoUpdate'}">수정</router-link>
+        <button v-if="userStore.loginUser"
+            @click="deleteVideo">삭제</button>
         
         <hr>
         
@@ -32,12 +34,15 @@
 </template>
 
 <script setup>
-    import ReviewView from '@/views/ReviewView.vue';
     import { ref, onMounted } from 'vue';
-    import { useVideoStore } from '@/stores/video';
     import { useRoute } from 'vue-router';
+    import { useVideoStore } from '@/stores/video';
+    import { useUserStore } from '@/stores/user';
+    import ReviewView from '@/views/ReviewView.vue';
+    
 
     const store = useVideoStore();
+    const userStore = useUserStore();
     const route = useRoute();
 
     const videoId = ref(route.params.videoId);

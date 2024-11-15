@@ -15,6 +15,7 @@ export const useReviewStore = defineStore('review', () => {
     })
     .then((response)=>{
       reviewList.value = response.data
+      // router.push({ name: "videoDetail", params: {videoId: videoId}})
     })
   }
 
