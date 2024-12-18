@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.mvc.model.dao.MessageDao">
+
+	<!-- 메시지 삽입 -->
+	<insert id="insertMessage" parameterType="Message" keyProperty="messageId" useGeneratedKeys="true">
+		INSERT INTO message (receiver, sender, sender_nickname, goal_id, content, day, stickerId)
+		VALUES (#{receiver}, #{sender}, #{senderNickname}, #{goalId}, #{content}, #{day}, #{stickerId});
+	</insert>
+	
+	<!--  전체 메시지 조회 -->
+	<select id="selectAllMessage" parameterType="String" resultType="Message">
+		SELECT * FROM message
+		WHERE receiver = #{receiver};
+	</select>
+	
+	<!-- messageId로 메시지 조회 -->	
+	<select id="selectMessageByMessageId" parameterType="int" resultType="Message">
+		SELECT * FROM message
+		WHERE message_id = #{messageId};
+	</select>
+	
+	<!-- 일차로 메시지 조회 -->
+	<select id="selectMessageByDay" parameterType="Map" resultType="Message">
+		SELECT * FROM message
+		WHERE receiver = #{receiver} AND day = #{day};
+	</select>
+	
+	<!-- 메시지 수정 -->
+	<update id="updateMessage" parameterType="Message">
+		UPDATE message
+		SET sender_nickname = #{senderNickname}, content = #{content}
+		WHERE message_id = #{messageId};
+	</update>
+	
+	<!-- messageId로 메시지 삭제 -->
+	<delete id="deleteMessageByMessageId" parameterType="int">
+		DELETE FROM message
+		WHERE message_id = #{messageId};
+	</delete>
+	
+	<!-- 랜덤 메시지 가져오기 -->
+	<select id="selectRandomMessage" parameterType="int" resultType="Message">
+		SELECT * FROM random_message
+		WHERE message_id = #{day};
+	</select>
+	
+</mapper>

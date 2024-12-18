@@ -1,0 +1,89 @@
+
+
+  
+  /* 헤더 요소 */
+  .header-layout {
+    position: relative;
+    display: flex; /* Flexbox 활성화 */
+  
+    flex-direction: row-reverse; /* 오른쪽에서 왼쪽 정렬 */
+    justify-content: flex-start; /* 요소 시작 위치를 왼쪽으로 */
+    align-items: center; /* 세로로 중앙 정렬 */
+    width: 500px; /* 부모 요소의 크기 지정 */
+    height: 20px;
+    gap: 10px; /* 요소 간 간격 */
+    /* border: 1px solid #ddd; */
+    margin-top: 0.6rem;
+  }
+  
+  .header-layout *{
+    display:flex;
+    margin-right : 20px;
+  }
+  
+  .header-ssafit-video-btn{
+    margin-left: 2rem;
+    margin-right: auto;
+    font-size: 22px;
+    font-family: 'LotteHappyBold';
+    color: gray;
+    text-decoration: none;
+  }
+  
+  /* 로그인 해야하는 css */
+  .header-login-btn {
+    height: 30px;;
+    margin-right: 1rem;
+    background-size: cover; /* 비율 유지하며 영역에 맞게 자름 */
+    background-position: center; /* 중앙 정렬 */
+    background-repeat: no-repeat; /* 반복 방지 */
+  }
+
+  /* 헤더 로그인 시 세부요소들 */
+  .header-login-container{
+    margin-left: auto;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+    .header-kakao-img{
+      height: 18px;
+      width: 18px;
+      background-size: cover; /* 비율 유지하며 영역에 맞게 자름 */
+      background-position: center; /* 중앙 정렬 */
+      background-repeat: no-repeat; /* 반복 방지 */
+      border-radius: 10px; /* 원형 또는 둥근 모서리 효과 (옵션) */
+
+      margin-right: 10px;
+    }
+    
+    .header-login-word{
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .header-logout-btn {
+      margin-right: 0px;
+      background: #FFFFFF;
+      border-radius: 5px;
+    
+      font-family: 'AppleSDGothicNeoM00';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      
+      padding-block: 5px;
+      padding-inline: 10px;
+
+
+      border: 0;
+      color: #767676;
+      
+
+      display: flex; /* Flexbox 활성화 */
+      justify-content: center; /* 가로 중앙 정렬 */
+      align-items: center; /* 세로 중앙 정렬 */
+      text-align: center; /* 텍스트 정렬 */
+    }

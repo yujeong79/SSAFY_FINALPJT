@@ -1,0 +1,50 @@
+.detail-align-result {
+    margin-top: 1.2rem;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    
+}
+
+.detail-box {
+    width: 100%;
+    min-height: 100vh; /* 화면 끝까지 채우는 높이 */
+    margin-inline: auto;
+
+    padding-inline : 0.6rem;
+    padding-top: 0.6rem;
+
+    border-radius: 15px;
+    background: #FFFFFF;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.detail-video-box{
+    width:100%;
+    aspect-ratio: 16 / 9; 
+}
+
+/* 제목부분 */
+.detail-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid green; */
+  }
+
+.detail-title {
+    margin-top: 0.8rem;
+    font-size: 22px;
+    font-family: AppleBold;
+    color: rgb(49, 49, 49);
+    text-align: center;
+}
+
+.detial-date {
+    font-size: 12px;
+}

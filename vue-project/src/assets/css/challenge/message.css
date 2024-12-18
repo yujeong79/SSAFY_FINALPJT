@@ -1,0 +1,188 @@
+
+
+/* 응원의 한마디 남기기 */
+.message-incourage {
+font-size: 18px;
+font-family: AppleBold;
+line-height: 20px;
+color: #4B4B4B;
+margin-block: 1.0rem;
+}
+
+
+/* 상단 요일부분 */
+.week-container {
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7열 고정 */
+    gap: 10px; /* 각 칸 사이 간격 */
+    margin-bottom: 0.5rem;
+}
+
+.week-container *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: AppleMedium;
+}
+
+/* 메세지 전체 정렬 */
+.day-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7열 고정 */
+    gap: 10px; 
+    }
+    
+ .day-item.blank {
+    background-color: transparent; /* 빈칸은 투명 */
+}
+    
+ /* 메세지 아이템 각요소의 틀 */
+    .day-item {
+    /* border: 1px solid blue; */
+    height: auto; /* 각 칸 높이 */
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}   
+
+/* ===========메세지 요소요소들 설정하기 =============*/
+
+    
+ /* 몇일차 메세지 */
+.message-date-word {
+    margin-top: 0.1rem;
+    font-size: 10px;
+    color: #333;
+    text-align: center;
+}
+    
+/* == 등록됐을때 ==*/
+/* 클릭할 컨테이너 */
+.message-click-container {
+    position: relative;
+    width: 100%; 
+    aspect-ratio: 1 / 1; /* 정사각형 비율 */
+    /* border: 2px solid orange; */
+    overflow: hidden; /* 넘치는 요소 숨기기 */
+}
+
+
+    /* 이미지 */
+    .message-img-container {
+        position: relative; /* 부모 기준 */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 90%;
+        height: 90%; /* 부모 높이에 맞춤 */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+  
+    /* =========== 닉네임 ============ */
+    /* 부모 요소: 닉네임을 감싸는 래퍼 */
+    .message-out-nickname-wrapper {
+        position: absolute;
+        display: flex;
+        justify-content: center; /* 가로 중앙 정렬 */
+        align-items: center; /* 세로 중앙 정렬 */
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        z-index: 2; /* 이미지 위에 배치 */
+        pointer-events: none; /* 클릭 불가 */
+        overflow: hidden; /* 넘치는 부분 숨기기 */
+        white-space: nowrap; /* 줄바꿈 방지 */
+    }
+
+    .message-out-nickname-wrapper > span {
+        font-size: 0.7rem;
+    }
+
+    /* 흰색 테두리 역할을 하는 텍스트 */
+    .message-out-nickname-border {
+        position: absolute;
+        color: transparent; /* 내부 텍스트는 투명하게 */
+        font-weight: bold;
+        font-family: LotteHappyBold;
+        z-index: 1;
+        -webkit-text-stroke: 1px white; /* 흰색 테두리 */
+        pointer-events: none;
+    }
+
+    /* 실제 텍스트 (검정색) */
+    .message-out-nickname {
+        position: relative;
+        color: black; /* 검정색 텍스트 */
+        font-family: LotteHappyBold;
+        z-index: 2; /* 테두리보다 앞에 */
+        pointer-events: none;
+    }
+
+
+    /* 조회버튼 하위요소 (기일 도래 이전 / 이후 ) */
+    .message-inner-look-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3; /* 이미지와 닉네임 위에 배치 */
+    }
+    
+    .message-inner-look-btn button {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    
+    /* =========== 등록 안됐을때 =============== */
+    /* 메세지 없을때 보이는 원 */
+    .message-none-circle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%; /* 부모 요소 크기에 맞춤 */
+        aspect-ratio: 1 / 1;
+        background-color: #d3d3d3; /* 빈 원의 색상 */
+        border-radius: 50%; /* 원형으로 만듦 */
+        z-index: 0; /* z-index를 낮은 값으로 유지 */
+    }
+
+    
+    /* 메세지 등록버튼 */
+    .message-out-regist-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        border: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        font-size: 1.3rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+        z-index: 3;
+        background-color: transparent;
+
+    }  
+    
+
+    
+    

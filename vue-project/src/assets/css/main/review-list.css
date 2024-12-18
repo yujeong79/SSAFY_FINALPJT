@@ -1,0 +1,129 @@
+.review-list-layout{
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+
+.thin-divider {
+    width: 100%;
+    border-top: 0.5px solid rgb(194, 194, 194); /* 0.5px의 상단 구분선 */
+    margin: 1rem 0;
+  }
+
+/* 리뷰 하나씩 */
+.review-block-container {
+    padding-inline: 4px;
+    width: 100%;
+    /* border: 1px solid blue; */
+    margin-bottom: 1rem;
+}
+
+    /* 닉네임이랑 버튼 들어있는 컨테이너 */
+    .review-block-first {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+        /* 닉네임 */
+        .review-block-first-nickname {
+            margin-block: 3px;
+            font-family: AppleSemiBold;
+        }
+
+        /* 버튼박스 */
+        .review-block-first-btn {
+            margin-left: auto; /* 왼쪽 여백을 자동으로 설정하여 오른쪽으로 밀기 */
+            display: flex; /* 버튼들을 가로로 정렬 */
+            justify-content: flex-end; /* 버튼들을 오른쪽 끝으로 정렬 */
+            gap: 8px; /* 버튼들 사이의 간격 설정 (선택 사항) */
+            /* border: 1px solid orange; */
+        }
+
+        .review-block-container button {
+            background-color: white;
+            border: none;
+
+            font-family: AppleRegular;
+            color: #858585;
+
+            font-size: 12px;
+        }
+
+    /* 내용이랑 등록일 들어있는 컨테이너 */
+    .review-block-second {
+        /* border: 1px solid salmon; */
+    }
+
+        /* 내용 */  
+        .review-block-second-content {
+            font-size: 16px;
+            font-family: AppleRegular;
+            color: rgb(39, 39, 39);
+            margin-bottom: 1px;
+        }
+
+
+        /* 날짜 */
+        .review-block-second-date {
+            font-size: 12px;
+            font-family: AppleRegular;
+            color: #aaaaaa;
+        }
+
+
+/* =====수정하기====== */
+/* 전체 박스틀 */
+.regist-modify-box {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    padding: 8px;
+    padding-top: 16px;
+    margin-bottom: 16px;
+}
+
+.regist-modify-realbox {
+    background-color: #f1f1f1;
+    padding-inline: 12px;
+    padding-right: 18px;
+    padding-block: 3px;
+
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+
+    border: none;
+    outline: none;
+    resize: none;
+
+    font-size: 15px;
+    font-family: AppleRegular;
+}
+
+.review-modify-sub-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-inline: 25px;
+}
+
+.regist-modify-btn {
+    margin-block: 4px;
+    margin-inline: 6px;
+
+    padding: 6px 12px;
+    font-family: AppleSemiBold;
+    font-size: 12px;
+    background-color: #C2DFFF;
+    color: #5469F8;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,73 @@
+.button-goal-container {
+    /* border: 1px solid blue; */
+
+    position: fixed; /* 항상 화면 기준 고정 */
+    bottom: 20px; /* 화면 상단에서 20px */
+    left: calc(50vw + 12rem);
+    z-index: 900;
+
+    width: 50px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.button-goal-modify {
+    display: flex;
+
+    margin-block: 0.5rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    
+    border : 0px;
+    border-radius: 50%;   
+    background-color: rgba(189, 221, 143, 0.767);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    color: white;
+    font-size: 10px; 
+
+    z-index: 900;
+}
+
+.button-goal-delete {
+    display: flex;
+
+    margin-block: 0.5rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    
+    border : 0px;
+    border-radius: 50%;   
+    background-color: rgba(189, 221, 143, 0.767);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    color: white;
+    font-size: 10px; 
+
+    z-index: 900;
+}
+
+.button-goal-share {
+    display: flex;
+
+    margin-block: 0.5rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    
+    border : 0px;
+    border-radius: 50%;   
+    background-color: rgba(134, 187, 113, 0.733);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    color: white;
+    font-size: 10px; 
+
+    z-index: 900;
+}

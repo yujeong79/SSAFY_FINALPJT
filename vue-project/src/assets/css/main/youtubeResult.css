@@ -1,0 +1,48 @@
+.result-box {
+    width: 100%;
+    min-height: 100vh; /* 화면 끝까지 채우는 높이 */
+    margin-top: 1.2rem;
+    margin-inline: auto;
+    max-width: calc(100% - 2.4rem); /* 패딩 제외 */
+
+    padding-inline : 0.6rem;
+    padding-top: 0.6rem;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  .result-item {
+    list-style-type: none;
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
+    margin-block: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .result-item-img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+    object-fit: cover; /* 비율 유지하며 이미지가 잘리지 않도록 */
+    border-radius: 10px; /* 둥근 모서리 */
+    display: block; /* inline-block 여백 문제 방지 */
+  }
+
+  .result-item-title {
+    margin-top:1.0rem;
+    margin-inline:1.0rem;
+    font-size: 20px;
+    font-family: AppleBold;
+    color: rgb(49, 49, 49);
+  }
+
+  .result-item-date {
+    margin-inline: 1.0rem;
+    font-size: 12px;
+    font-family: AppleBold;
+    color: rgb(151, 151, 151);
+  }
+
