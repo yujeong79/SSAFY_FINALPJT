@@ -38,7 +38,7 @@
   - 내 챌린지를 도와줘 : 목표 컴포넌트, 메시지 컴포넌트, 모달 컴포넌트 CSS 적용
 * BACK
   - API 사용 : 카카오톡 로그인 API, 유튜브 API 등
-  - 내 챌린지를 도와줘 : 목표 등록/수정/삭제/조회, 메시지 등록/삭제/조회
+  - 내 챌린지를 도와줘 : 목표 등록/수정/삭제/조회, 메시지 등록/삭제/조회, 랜덤메시지 생성/조회
 
 #### 🐶 김현래
 * FRONT
@@ -60,33 +60,52 @@
 ### 🖥️ 화면 구성 및 주요 기능
 #### SSAFIT
 ##### 1. 로그인
+- 사용자 친화적인 서비스를 위해 카카오톡 로그인 API를 사용한다.
 
 ##### 2. 영상 검색 및 조회, 리뷰 등록
+![영상검색및영상조회](https://github.com/user-attachments/assets/f5f391fc-f9bd-4b9c-aed7-a71e04166006)
 
 ##### 3. 리뷰 수정 및 삭제
+![리뷰수정및삭제](https://github.com/user-attachments/assets/7fa2319d-cf77-4ad9-b00a-f0a94a7fa82b)
 
 #### 내 챌린지를 도와줘
+- 사용자 계정당 하나의 목표를 등록할 수 있다.
 ##### 1. 목표 등록
+![목표등록(수정가능버전)](https://github.com/user-attachments/assets/891b70cb-76a5-4db4-b3d3-fef6d9030ab2)
 
 ##### 2. 목표 수정
+- 등록한 목표는 목표 시작일 이전에만 수정이 가능하며, 외부 사용자와 활발한 소통을 위해 '한마디' 기능은 언제든지 수정 가능하다.
 ###### 2-1. 전체 수정
+![목표수정](https://github.com/user-attachments/assets/fdc70f52-c41c-470f-953a-00169c4a50c7)
 ###### 2-2. 한마디 수정
+![한마디수정](https://github.com/user-attachments/assets/99598f36-581d-42a3-ae29-95dfb71e4741)
 
 ##### 3. 메시지 조회
+- 열람 가능 날짜 이전에는 메시지를 조회할 수 없으며 메시지 열람 가능 날짜 이후에도 등록된 메시지가 없다면 사용자의 동기부여를 위해 랜덤 메시지를 생성하여 제공한다.
 ###### 3-1. 메시지 조회 불가(열람 가능 날짜 이전)
+![메시지열람가능날짜이전에](https://github.com/user-attachments/assets/bc40b80e-9113-430e-9834-13c9c0368cb3)
 ###### 3-2. 메시지 조회(열람 가능 날짜 이후)
+![메시지조회](https://github.com/user-attachments/assets/3b008404-11d1-4b11-8164-08fa5cb35405)
+###### 3-3. 랜덤 메시지 조회
+![랜덤메시지조회](https://github.com/user-attachments/assets/0e1ca745-7495-4360-a3b2-19e8bdb5ff2b)
 
 ##### 4. 공유하기
+- 사용자의 목표를 SNS의 공유하여 외부 사용자들이 사용자의 목표를 보고 응원 메시지를 남길 수 있도록 한다.
 ###### 4-1. 카카오톡 공유하기
-
+![카카오톡공유](https://github.com/user-attachments/assets/4525ea4d-9dd6-450a-a9ca-8fcb538e01db)
 ###### 4-2. X 공유하기
+![트위터공유](https://github.com/user-attachments/assets/c1201137-dc4b-47f1-9c84-9f48559e6ccd)
 
 ##### 5. 목표 삭제
+![목표삭제](https://github.com/user-attachments/assets/4782b014-5f26-47e5-b826-d6a84d723df6)
 
 #### 외부 사용자
 ##### 1. 메시지 등록(Chat GPT 욕설 필터링)
+- 건강하고 신뢰할 수 있는 서비스 제공을 위해 외부 사용자가 비속어 및 욕설을 포함한 메시지를 등록할 경우 Chat GPT가 이를 감지하고 필터링하여 메시지 등록을 할 수 없도록 막는다.
 ###### 1-1. 욕설이 포함된 경우
+![메시지욕설감지](https://github.com/user-attachments/assets/bbbf6edd-0cae-45a4-9a8d-95adc52c0a01)
 ###### 2-1. 욕설이 포함되지 않은 경우
+![메시지정상등록](https://github.com/user-attachments/assets/00f42995-50df-4c2e-9c3f-52a1198494e0)
 
 ### 💭 프로젝트 후기
 #### 🐨 김유정
